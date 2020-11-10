@@ -29,29 +29,45 @@ namespace HastighedConverter
 
         private void ms_TextChanged(object sender, TextChangedEventArgs e)
         {
-            double x = double.Parse(ms.Text);
             if (ms.Text == "")
             {
                 kmt.Text = "";
             }
             else
             {
-                x = x * 3.6;
-                kmt.Text = Math.Round(x, 2).ToString();
+                try
+                {
+                    kmt.Text = (double.Parse(ms.Text) * 3.6).ToString();
+                    kmt.CaretIndex = kmt.Text.Length;
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Input must be a valid number");
+                }
+                
             }
         }
 
         private void kmt_TextChanged(object sender, TextChangedEventArgs e)
         {
-            double x = double.Parse(kmt.Text);
             if (kmt.Text == "")
             {
                 ms.Text = "";
             }
             else
             {
-                x = x / 3.6;
-                ms.Text = Math.Round(x, 2).ToString();
+                try
+                {
+                    ms.Text = (double.Parse(kmt.Text) / 3.6).ToString();
+                    ms.CaretIndex = ms.Text.Length;
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Input must be a valid number");
+                }
+                
             }
         }
     }

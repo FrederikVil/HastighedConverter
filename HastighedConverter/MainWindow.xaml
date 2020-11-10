@@ -7,12 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" FontSize="24">
     <Grid>
-        <Label Content="Konverter hastigheder" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" Width="Auto"/>
-        <TextBox HorizontalAlignment="Left" Name="kmt" TextChanged="kmt_TextChanged" Height="41" Margin="122,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173"/>
-        <TextBox HorizontalAlignment="Left" Name="ms" TextChanged="ms_TextChanged" Height="41" Margin="519,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173"/>
+        <Label Content="Konverter hastigheder" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="283,29,265,0" VerticalAlignment="Top" Width="Auto"/>
+
+        <TextBox HorizontalAlignment="Left" Name="kmt" TextChanged="kmt_TextChanged" Height="41" Margin="122,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value=" 10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <TextBox HorizontalAlignment="Left" Name="ms" TextChanged="ms_TextChanged" Height="41" Margin="519,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value=" 10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
         
         <Label Content="km/t" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="122,106,0,0" VerticalAlignment="Top" Width="Auto"/>
         <Label Content="m/s" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="519,106,0,0" VerticalAlignment="Top" Width="Auto"/>
+        <Label Content="=" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="389,158,0,0" VerticalAlignment="Top" Width="Auto" FontSize="36"/>
 
     </Grid>
 </Window>

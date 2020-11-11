@@ -42,7 +42,6 @@ namespace HastighedConverter
                 }
                 catch (Exception)
                 {
-
                     MessageBox.Show("Input must be a valid number");
                 }
                 
@@ -64,7 +63,6 @@ namespace HastighedConverter
                 }
                 catch (Exception)
                 {
-
                     MessageBox.Show("Input must be a valid number");
                 }
                 

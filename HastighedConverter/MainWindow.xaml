@@ -6,28 +6,58 @@
         xmlns:local="clr-namespace:HastighedConverter"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" FontSize="24">
-    <Grid>
-        <Label Content="Konverter hastigheder" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="283,29,265,0" VerticalAlignment="Top" Width="Auto"/>
 
-        <TextBox HorizontalAlignment="Left" Name="kmt" TextChanged="kmt_TextChanged" Height="41" Margin="122,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173">
-            <TextBox.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value=" 10"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
+    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Width="790" Height="420" Background="Gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
-        <TextBox HorizontalAlignment="Left" Name="ms" TextChanged="ms_TextChanged" Height="41" Margin="519,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173">
-            <TextBox.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value=" 10"/>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
-        
-        <Label Content="km/t" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="122,106,0,0" VerticalAlignment="Top" Width="Auto"/>
-        <Label Content="m/s" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="519,106,0,0" VerticalAlignment="Top" Width="Auto"/>
-        <Label Content="=" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="389,158,0,0" VerticalAlignment="Top" Width="Auto" FontSize="36"/>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="Konverter hastigheder" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Name="kmt" TextChanged="kmt_TextChanged" Height="41" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="173">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value=" 10"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <TextBox Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" Name="ms" TextChanged="ms_TextChanged" Height="41" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="173">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value=" 10"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="km/t" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center"  Width="Auto"/>
+            <Label Grid.Row="0" Grid.Column="2" Content="m/s" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" Width="Auto"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="=" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" Width="Auto" FontSize="36"/>
+
+        </Grid>
+
 
     </Grid>
 </Window>
